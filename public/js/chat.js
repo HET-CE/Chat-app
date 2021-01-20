@@ -19,7 +19,8 @@ const messageTemplate = document.querySelector('#message-template-self').innerHT
 const messageTemplate2 = document.querySelector('.template-mes').innerHTML
 const locationTemplate = document.querySelector('#location-template-self').innerHTML
 const locationTemplate2 = document.querySelector('.template-loc').innerHTML
-const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
+const sidebarTemplate = document.querySelector('#sidebar-template-self').innerHTML
+const sidebarTemplate2 = document.querySelector('.template-side').innerHTML
 
 //Options
 const {username , room} = Qs.parse(location.search , { ignoreQueryPrefix: true})
@@ -85,11 +86,20 @@ socket.on('locationMessage2', (loc) => {
     autoscroll()
 })
 
+
 socket.on('roomData', ({ room, users, UserName}) => {
     const html = Mustache.render(sidebarTemplate, {
-        room,
-        users,
-        UserName
+        room : room,
+        users: users,
+        UserName : UserName.username
+    })
+    document.querySelector('#sidebar').innerHTML = html
+})
+socket.on('roomData', ({ room, users, UserName}) => {
+    const html = Mustache.render(sidebarTemplate2, {
+        room2 : room,
+        users2: users,
+        UserName2 : UserName.username
     })
     document.querySelector('#sidebar').innerHTML = html
 })
