@@ -7,6 +7,13 @@ const $messageFormButton = $messageForm.querySelector('button')
 const $sendLocationButton = document.querySelector('#send-location')
 const $messages = document.querySelector('#messages')
 
+
+const $bottomButton = document.querySelector('#scrollDown')
+$bottomButton.addEventListener('click',()=>{
+    $messages.scrollTop = $messages.scrollHeight
+})
+
+
 // Templates
 const messageTemplate = document.querySelector('#message-template').innerHTML
 const locationTemplate = document.querySelector('#location-template').innerHTML
