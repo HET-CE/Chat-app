@@ -15,8 +15,10 @@ $bottomButton.addEventListener('click',()=>{
 
 
 // Templates
-const messageTemplate = document.querySelector('#message-template').innerHTML
-const locationTemplate = document.querySelector('#location-template').innerHTML
+const messageTemplate = document.querySelector('#message-template-self').innerHTML
+const messageTemplate2 = document.querySelector('.template-mes').innerHTML
+const locationTemplate = document.querySelector('#location-template-self').innerHTML
+const locationTemplate2 = document.querySelector('.template-loc').innerHTML
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 
 //Options
@@ -50,12 +52,34 @@ socket.on('message', (message) => {
     autoscroll()
 })
 
+socket.on('message2', (message) => {
+    console.log(message)
+    const html = Mustache.render(messageTemplate2, {
+        username2: message.username,
+        message2: message.text,
+        createdAt2: moment(message.createdAt).format('h:mm a')
+    })
+    $messages.insertAdjacentHTML('beforeend', html)
+    autoscroll()
+})
+
 socket.on('locationMessage', (loc) => {
     console.log(loc)
     const html = Mustache.render(locationTemplate, {
         username: loc.username,
         loc: loc.text,
         createdAt: moment(loc.createdAt).format('h:mm a')
+    })
+    $messages.insertAdjacentHTML('beforeend', html)
+    autoscroll()
+})
+
+socket.on('locationMessage2', (loc) => {
+    console.log(loc)
+    const html = Mustache.render(locationTemplate2, {
+        username2: loc.username,
+        loc2: loc.text,
+        createdAt2: moment(loc.createdAt).format('h:mm a')
     })
     $messages.insertAdjacentHTML('beforeend', html)
     autoscroll()
