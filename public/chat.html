@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/styles.css">
@@ -18,9 +20,10 @@
             <div class="compose">
                 <form id="message-form">
                     <input name="message" placeholder="Message" required autocomplete="off">
-                    <button>Send</button>
+                    <button class = "only-apply-media-send-button">Send</button>
                 </form>
-                <button id="send-location">Send location</button>
+                <button id="send-location">Location</button>
+
                 <button id="scrollDown" style="margin-left: 2px; border-radius: 50%;" data-testid="down"
                     data-icon="down""><svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 0 19 20" width="19"
                     height="20">

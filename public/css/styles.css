@@ -186,7 +186,8 @@ button:disabled {
     padding: 12px 24px 0 24px;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 800px) {
+    /* For index.html */
     .centered-form__box {
         width: 80%;
         height: 80%;
