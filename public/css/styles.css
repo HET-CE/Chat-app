@@ -35,6 +35,9 @@ input {
     outline: none;
 }
 
+.send-message-space{
+    outline: 2px solid black
+}
 button {
     cursor: pointer;
     padding: 12px;
@@ -185,6 +188,19 @@ button:disabled {
     font-weight: 300;
     padding: 12px 24px 0 24px;
 }
+.burger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 10px;
+}
+.line{
+width: 33px;
+background-color: black;
+height: 4px;
+margin: 5px 3px;
+}
 
 @media only screen and (max-width: 800px) {
     /* For index.html */
@@ -195,4 +211,13 @@ button:disabled {
     .only-apply-in-media {
         margin-top: 50px;
     }
+}
+
+@media only screen and (max-width: 520px) {
+  .burger{
+      display: block;
+  }
+  .visible-resp { 
+   display: none
+   }
 }
