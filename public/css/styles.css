@@ -189,6 +189,9 @@ button:disabled {
 @media only screen and (max-width: 800px){
     .centered-form__box {
         width: 80%;
-        height: 60%;
+        height: 80%;
+    }
+    .only-apply-in-media {
+        margin-top: 50px;
     }
 }
