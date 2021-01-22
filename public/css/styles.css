@@ -116,10 +116,10 @@ button:disabled {
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+    margin-bottom: 21px;   
 }
 .message-self {
-    margin-bottom: 16px;
+    margin-bottom: 21px;
     background-color: darkseagreen;
     border-radius: 0 15px 0 15px;
     padding: 7px;
@@ -201,7 +201,6 @@ background-color: black;
 height: 4px;
 margin: 5px 3px;
 }
-
 @media only screen and (max-width: 800px) {
     /* For index.html */
     .centered-form__box {
