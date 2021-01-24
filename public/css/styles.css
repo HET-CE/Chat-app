@@ -194,13 +194,16 @@ button:disabled {
     display: none;
     cursor: pointer;
     position: absolute;
-    right: 12%;
+    right: 7%;
     top: 15px;
+    background-color: floralwhite;
+    border: 1px solid #333;
+    border-radius: 8px;
 }
 .line{
 width: 33px;
 background-color: black;
-height: 4px;
+height: 3px;
 margin: 5px 3px;
 }
 @media only screen and (max-width: 800px) {
