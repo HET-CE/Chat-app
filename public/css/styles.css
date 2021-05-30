@@ -90,6 +90,9 @@ button:disabled {
 
 .chat {
     display: flex;
+    background-image :url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat;
+    background-position: center;
 }
 
 .chat__sidebar {
@@ -123,6 +126,8 @@ button:disabled {
 }
 .message-self {
     margin-bottom: 21px;
+    width: fit-content;
+    margin-left: auto;
     background-color: darkseagreen;
     border-radius: 0 15px 0 15px;
     padding: 7px;

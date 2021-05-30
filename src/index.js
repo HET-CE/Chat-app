@@ -40,7 +40,7 @@ io.on('connection', (socket) => {
         })
         callback()
     })
-
+    
     socket.on('sendMessage', (message, callback) => {
         const filter = new Filter()
 
@@ -68,7 +68,7 @@ io.on('connection', (socket) => {
 
         if(user){
             io.to(user.room).emit('message2', generateMessage(`${user.username} has left!`))
-            io.to(user.room).emit('roomData', {
+            io.to(user.room).emit('roomData2', {
                 room: user.room,
                 users: getUsersInRoom(user.room)
             })
